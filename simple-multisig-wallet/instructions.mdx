@@ -2,7 +2,7 @@
 title: "Fix the Simple Multisig Wallet"
 description: "Learn to fix a broken Bitcoin multi-signature wallet implementation"
 date: 2024-11-01T10:00:00Z
-lastmod: "2024-11-01"
+lastmod: "2024-11-20"
 author: 
   name: "Theophilus Isah"
   avatar: "https://avatars.githubusercontent.com/u/60826700?v=4"
@@ -13,14 +13,12 @@ tags:
   - "bitcoin"
   - "cryptocurrency"
   - "security"
-  - "typescript"
-languages: "TypeScript"
+  - "wallet"
+languages: ["typescript"]
 difficulty: "Intermediate"
 timeEstimate: 90
 prerequisites: 
-  - "Basic TypeScript"
   - "Bitcoin fundamentals"
-framework: "bitcoinjs-lib, tiny-secp256k1, bitcoin-address-validator"
 starterCode: "https://github.com/hxckr-org/workshop-broken-musig-wallet-debugging--ts"
 ---
 
@@ -37,116 +35,28 @@ Fix the simple multisig wallet implementation. Multi-signature (multisig) wallet
 - Create secure transaction signing mechanisms
 </LearningObjectives>
 
-## Core Concepts
+## Stages
 
-<ConceptCard title="Bitcoin Multi-Signature Fundamentals">
-A multi-signature address requires M-of-N signatures to spend funds, where:
-- M = number of required signatures
-- N = total number of possible signers
-- Example: In a 2-of-3 setup, any 2 out of 3 designated parties must sign
-</ConceptCard>
-
-<ConceptCard title="Address Types">
-- **P2SH (Pay to Script Hash)**
-  - Legacy format starting with '2' on testnet
-  - Embeds script hash in address
-  
-- **P2WSH (Pay to Witness Script Hash)**
-  - Modern SegWit format starting with 'tb1' on testnet
-  - Separates script data into witness
-</ConceptCard>
-
-<ConceptCard title="Important BIP Standards">
-- **BIP32**: Hierarchical Deterministic Wallets
-- **BIP39**: Mnemonic seed phrases
-- **BIP48**: Multi-signature derivation paths
-</ConceptCard>
-
-## Challenge Instructions
-
-<SetupSteps>
-1. Clone the repository and install dependencies:
-```bash
-git clone https://github.com/your-repo/bitcoin-multisig-challenge
-cd bitcoin-multisig-challenge
-npm install
-```
-
-2. Examine the code in `index.ts`
-
-3. Run the tests:
-```bash
-./your_program.sh
-```
-
-4. Fix the implementation until all tests pass
-</SetupSteps>
-
-<ResourceSection>
-### Essential Resources
-
-<ResourceCard 
-  title="Bitcoin Script"
-  links={[
-    { text: "Script Wiki", url: "https://en.bitcoin.it/wiki/Script" },
-    { text: "Bitcoin Opcode Reference", url: "https://en.bitcoin.it/wiki/Script#Opcodes" }
-  ]}
-/>
-
-<ResourceCard 
-  title="BIP Standards"
-  links={[
-    { text: "BIP48 Specification", url: "https://github.com/bitcoin/bips/blob/master/bip-0048.mediawiki" },
-    { text: "BIP32 HD Wallets", url: "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" }
-  ]}
-/>
-
-<ResourceCard 
-  title="Security Best Practices"
-  links={[
-    { text: "Bitcoin Multisig Security", url: "https://bitcoin.org/en/secure-your-wallet#multi-sig" },
-    { text: "Hardware Wallet Integration", url: "https://bitcoin.org/en/choose-your-wallet" }
-  ]}
-/>
-</ResourceSection>
-
-<StudyTopics>
-### Key Areas to Study
-
-<TopicCard title="HD Wallet Derivation">
-- Understanding BIP32 paths
-- Account and address derivation
-- Key generation security
-</TopicCard>
-
-<TopicCard title="Bitcoin Script">
-- Multisig script structure
-- P2SH and P2WSH differences
-- Script compilation and execution
-</TopicCard>
-
-<TopicCard title="Transaction Signing">
-- Signature hash types
-- Witness structure
-- Public key handling
-</TopicCard>
-
-<TopicCard title="Address Generation">
-- Script hashing
-- Address encoding
-- Network prefixes
-</TopicCard>
-</StudyTopics>
-
-<BonusChallenges>
-After completing the main challenge, try:
-1. Adding hardware wallet support
-2. Implementing timelock features
-3. Adding PSBT support
-</BonusChallenges>
-
-<SecurityNote>
-Remember: Security in cryptocurrency is critical. Take time to understand each concept thoroughly before moving forward.
-</SecurityNote>
-
-<ChallengeStatus />
+<Stages>
+  <Stage>
+    <StageTitle>Challenge Setup</StageTitle>
+    <StageDifficulty>Very Easy</StageDifficulty>
+    <StageDescription>
+      Choose your preferred language and proficiency level.
+    </StageDescription>
+  </Stage>
+  <Stage>
+    <StageTitle>Project Setup</StageTitle>
+    <StageDifficulty>Easy</StageDifficulty>
+    <StageDescription>
+      Clone the repository and install the dependencies.
+    </StageDescription>
+  </Stage>
+  <Stage>
+    <StageTitle>Fix the Multisig Wallet</StageTitle>
+    <StageDifficulty>Intermediate</StageDifficulty>
+    <StageDescription>
+      Fix the multisig wallet implementation.
+    </StageDescription>
+  </Stage>
+</Stages>
