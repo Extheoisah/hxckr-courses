@@ -1,0 +1,82 @@
+---
+title: "Fix the Broken Multi-Signature Wallet"
+action: "fix the multisig wallet"
+---
+
+# Module 3
+
+<ChallengeBrief>
+Fix the simple multisig wallet implementation. Multi-signature (multisig) wallets are a critical security feature in Bitcoin, requiring multiple parties to authorize a transaction. In this challenge, you'll examine and improve a Bitcoin multisig wallet implementation.
+</ChallengeBrief>
+
+<LearningObjectives>
+- Implement secure Bitcoin multi-signature addresses
+- Master P2SH and P2WSH address types
+- Apply BIP standards for HD wallet derivation
+- Create secure transaction signing mechanisms
+</LearningObjectives>
+
+## Core Concepts
+
+<ConceptCard title="Bitcoin Multi-Signature Fundamentals">
+A multi-signature address requires M-of-N signatures to spend funds, where:
+- M = number of required signatures
+- N = total number of possible signers
+- Example: In a 2-of-3 setup, any 2 out of 3 designated parties must sign
+</ConceptCard>
+
+<ConceptCard title="Address Types">
+- **P2SH (Pay to Script Hash)**
+  - Legacy segwit multisig format starting with '2' on testnet
+  - Embeds script hash in address
+  
+- **P2WSH (Pay to Witness Script Hash)**
+  - Modern SegWit multisig format starting with 'tb1' on testnet and 'bc1' on mainnet
+  - Separates script data into witness
+</ConceptCard>
+
+<ConceptCard title="Important BIP Standards">
+- **BIP32**: Hierarchical Deterministic Wallets
+- **BIP39**: Mnemonic seed phrases
+- **BIP48**: Multi-signature derivation paths
+</ConceptCard>
+
+## Challenge Instructions
+
+<SetupSteps>
+1. Examine the code in `index.ts`
+2. Run the tests:
+```bash
+./your_program.sh
+```
+3. Fix the implementation until all tests pass
+</SetupSteps>
+
+
+<ResourceSection>
+### Essential Resources
+
+<ResourceCard 
+  title="Bitcoin Script"
+  links={[
+    { text: "Script Wiki", url: "https://en.bitcoin.it/wiki/Script" },
+    { text: "Bitcoin Opcode Reference", url: "https://en.bitcoin.it/wiki/Script#Opcodes" }
+  ]}
+/>
+
+<ResourceCard 
+  title="BIP Standards"
+  links={[
+    { text: "BIP48 Specification", url: "https://github.com/bitcoin/bips/blob/master/bip-0048.mediawiki" },
+    { text: "BIP32 HD Wallets", url: "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Security Best Practices"
+  links={[
+    { text: "Bitcoin Multisig Security", url: "https://bitcoin.org/en/secure-your-wallet#multi-sig" },
+    { text: "Hardware Wallet Integration", url: "https://bitcoin.org/en/choose-your-wallet" }
+  ]}
+/>
+</ResourceSection>
