@@ -1,0 +1,66 @@
+---
+title: "Build a Bitcoin Transaction Unlocking Script"
+action: "build the transaction unlocking script"
+---
+
+# Module 3
+
+<ChallengeBrief>
+Build a Bitcoin transaction unlocking script. In Bitcoin, transaction unlocking scripts are used to unlock the funds in a transaction. 
+They are typically embedded within the transaction's output script, which is executed by the recipient to verify the transaction's validity.
+In this challenge, you'll build a transaction unlocking script.
+</ChallengeBrief>
+
+<LearningObjectives>
+- Understand the structure of a Bitcoin transaction
+- Implement a transaction unlocking script
+- Create secure transaction signing mechanisms
+</LearningObjectives>
+
+## Core Concepts
+
+<ConceptCard title="Bitcoin Transaction Fundamentals">
+A transaction is a fundamental unit of data in Bitcoin, representing a transfer of value between two parties. 
+It contains information about the inputs (previous transactions that provide funds) and outputs (newly created outputs with specified amounts and destinations).
+</ConceptCard>
+
+<ConceptCard title="Transaction Inputs and Outputs">
+- **Inputs**: References previous transactions that provide funds.
+- **Outputs**: Specifies the new outputs with amounts and destinations.
+</ConceptCard>
+
+<ConceptCard title="Locking and Unlocking Scripts">
+- **Locking Script**: Embedded in the transaction output, used to specify conditions for spending the output.
+- **Unlocking Script**: Attached to the transaction input, used to satisfy the conditions specified in the locking script.
+</ConceptCard>
+
+## Challenge Instructions
+
+<SetupSteps>
+1. Examine the code in `index.ts`
+2. Run the tests:
+```bash
+./your_program.sh
+```
+3. Fix the implementation until all tests pass
+</SetupSteps>
+
+
+<ResourceSection>
+### Essential Resources
+
+<ResourceCard 
+  title="Bitcoin Transaction Script"
+  links={[
+    { text: "Script Wiki", url: "https://en.bitcoin.it/wiki/Script" },
+    { text: "Bitcoin Opcode Reference", url: "https://en.bitcoin.it/wiki/Script#Opcodes" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Security Best Practices"
+  links={[
+    { text: "Bitcoin Transaction Script", url: "https://bitcoin.org/en/developer-reference#transaction-scripts" },
+  ]}
+/>
+</ResourceSection>

@@ -1,6 +1,6 @@
 ---
-title: "Fix the Simple Multisig Wallet"
-description: "Learn to fix a broken Bitcoin multi-signature wallet implementation"
+title: "Build a Bitcoin Transaction Unlocking Script"
+description: "Learn to build a Bitcoin transaction unlocking script"
 date: 2024-11-01T10:00:00Z
 lastmod: "2024-11-20"
 author: 
@@ -13,7 +13,7 @@ tags:
   - "bitcoin"
   - "cryptocurrency"
   - "security"
-  - "wallet"
+  - "transaction"
 languages: ["typescript"]
 difficulty: "Intermediate"
 timeEstimate: 90
@@ -22,16 +22,17 @@ prerequisites:
 starterCode: "https://github.com/hxckr-org/workshop-broken-musig-wallet-debugging--ts"
 ---
 
-# Multi-Signature Bitcoin Wallet Challenge
+# Build a Bitcoin Transaction Unlocking Script
 
 <ChallengeBrief>
-Fix the simple multisig wallet implementation. Multi-signature (multisig) wallets are a critical security feature in Bitcoin, requiring multiple parties to authorize a transaction. In this challenge, you'll examine and improve a Bitcoin multisig wallet implementation.
+Build a Bitcoin transaction unlocking script. In Bitcoin, transaction unlocking scripts are used to unlock the funds in a transaction. 
+They are typically embedded within the transaction's output script, which is executed by the recipient to verify the transaction's validity.
+In this challenge, you'll build a transaction unlocking script.
 </ChallengeBrief>
 
 <LearningObjectives>
-- Implement secure Bitcoin multi-signature addresses
-- Master P2SH and P2WSH address types
-- Apply BIP standards for HD wallet derivation
+- Understand the structure of a Bitcoin transaction
+- Implement a transaction unlocking script
 - Create secure transaction signing mechanisms
 </LearningObjectives>
 
@@ -53,10 +54,10 @@ Fix the simple multisig wallet implementation. Multi-signature (multisig) wallet
     </StageDescription>
   </Stage>
   <Stage>
-    <StageTitle>Fix the Multisig Wallet</StageTitle>
+    <StageTitle>Build the Transaction Unlocking Script</StageTitle>
     <StageDifficulty>Intermediate</StageDifficulty>
     <StageDescription>
-      Fix the multisig wallet implementation.
+      Build the transaction unlocking script.
     </StageDescription>
   </Stage>
 </Stages>
