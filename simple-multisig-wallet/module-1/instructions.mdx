@@ -3,59 +3,44 @@ title: "Fix the Broken Multi-Signature Wallet"
 action: "Challenge Setup"
 ---
 
-# Introductions
+<IntroductionCard title="Introduction" subtitle="Welcome to the Fix the Broken Multi-Signature Wallet Challenge!">
+  Multi-signature wallets are an important security feature in Bitcoin, requiring multiple parties to authorize a transaction. 
+  In this challenge, you'll be tasked with fixing an existing broken multi-signature wallet implementation. 
+  You'll learn about key cryptographic concepts, work with Bitcoin transaction scripts, and gain a better understanding of how multisig addresses work.
 
-<IntroductionCard>
-  <h2>Introductions</h2>
-  <p>Welcome to the Fix the Broken Multi-Signature Wallet Challenge!</p>
-  <p>
-    Multi-signature wallets are an important security feature in Bitcoin, requiring multiple parties to authorize a transaction. 
-    In this challenge, you'll be tasked with fixing an existing broken multi-signature wallet implementation. 
-    You'll learn about key cryptographic concepts, work with Bitcoin transaction scripts, and gain a better understanding of how multisig addresses work.
-  </p>
-  <p>
-    Along the way, you'll learn about Bitcoin transaction scripts, and more.
-  </p>
+  Along the way, you'll learn about Bitcoin transaction scripts, and more.
 </IntroductionCard>
 
-<PreChallengeAssessment>
-  <h2>Pre-challenge Assessment</h2>
+<Dropdown title="Pre-challenge Assessment">
+  <DropdownItem tag="language" title="Preferred Language:" content="Which language would you like to use? We'll create a Git repository with starter code for you to work on." isExpandable={true}>
+    Javascript
+    
+    Rust
 
-  <Dropdown>
-    <DropdownItem title="Preferred Language">
-      <h3>Preferred Language:</h3>
-      <p>
-        Which language would you like to use? We'll create a Git repository with
-        starter code for you to work on.
-      </p>
-      <LanguageOptions>
-        <LanguageButton>Javascript</LanguageButton>
-        <LanguageButton>Rust</LanguageButton>
-        <LanguageButton>Python</LanguageButton>
-        <LanguageButton>Go</LanguageButton>
-      </LanguageOptions>
-    </DropdownItem>
+    Python
 
-    <DropdownItem title="Language Proficiency">
-      <h3>Language Proficiency:</h3>
-      <p>Which language would you like to use? We'll create a Git repository with starter code for you to work on.</p>
-      <ProficiencyOptions>
-        <ProficiencyButton>Never Tried</ProficiencyButton>
-        <ProficiencyButton>Beginner</ProficiencyButton>
-        <ProficiencyButton>Intermediate</ProficiencyButton>
-        <ProficiencyButton>Advanced</ProficiencyButton>
-      </ProficiencyOptions>
-    </DropdownItem>
+    Go
+  </DropdownItem>
 
-    <DropdownItem title="Practice Frequency">
-      <h3>Practice Frequency:</h3>
-      <p>How often do you want to practice coding?</p>
-      <PracticeFrequencyOptions>
-        <PracticeFrequencyButton>Daily</PracticeFrequencyButton>
-        <PracticeFrequencyButton>Weekly</PracticeFrequencyButton>
-        <PracticeFrequencyButton>Monthly</PracticeFrequencyButton>
-        <PracticeFrequencyButton>Rarely</PracticeFrequencyButton>
-      </PracticeFrequencyOptions>
-    </DropdownItem>
-  </Dropdown>
-</PreChallengeAssessment>
+  <DropdownItem tag="proficiency" title="Language Proficiency:" content="Which language would you like to use? We'll create a Git repository with starter code for you to work on." isExpandable={true}>
+    Never Tried
+
+    Beginner
+
+    Intermediate
+
+    Advanced
+  </DropdownItem>
+
+  <DropdownItem tag="frequency" title="Practice Frequency:" content="How often do you want to practice coding?" isExpandable={true}>
+    Daily
+
+    Weekly
+
+    Monthly
+    
+    Rarely
+  </DropdownItem>
+</Dropdown>
+
+<Button title="Continue" link="/module-2/instructions" />

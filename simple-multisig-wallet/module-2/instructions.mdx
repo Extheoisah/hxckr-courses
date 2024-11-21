@@ -3,29 +3,32 @@ title: "Fix the Broken Multi-Signature Wallet"
 action: "Project Setup"
 ---
 
-# Module 2
+<ContentBox title="Project Setup" description="To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.">
+ To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.
 
-<p>
-    To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.
-</p>
+<Step step="1" title="Clone the Repository">
+    <Terminal repo_name={"repo_name"} repo_url={"repo_url"} language_specific_install_command={""}>
+        git clone {repo_url}
+    </Terminal>
+</Step>
 
-## Step 1: Clone the Repository
+<Step step="2" title="Install Dependencies">
+    <Terminal repo_name={"repo_name"} repo_url={""} language_specific_install_command={language_specific_install_command}>
+        cd {repo_name}
+        {language_specific_install_command}
+    </Terminal>
+</Step>
 
+<Step step="3" title="Push an empty commit">
+    <Terminal>
+        git commit --allow-empty -m "Initial commit"
 
-<Terminal>
-    git clone {repo_url}
-</Terminal>
+        git push
+    </Terminal>
+</Step>
 
-## Step 2: Install Dependencies
+<Text>
+    After pushing the empty commit, you should see a message indicating that the commit was pushed successfully.
+</Text>
 
-<Terminal>
-    cd {repo_name}
-    {language_specific_install_command}
-</Terminal>
-
-## Step 3: Push an empty commit
-
-<Terminal>
-    git commit --allow-empty -m "Initial commit"
-    git push
-</Terminal>
+</ContentBox>
