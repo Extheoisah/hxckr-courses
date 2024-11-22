@@ -7,20 +7,20 @@ action: "Project Setup"
  To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.
 
 <Step step="1" title="Clone the Repository">
-    <Terminal repo_name={"repo_name"} repo_url={"repo_url"} language_specific_install_command={""}>
+    <Terminal repo_name="repo_name" repo_url="repo_url" language_specific_install_command="" >
         git clone {repo_url}
     </Terminal>
 </Step>
 
 <Step step="2" title="Install Dependencies">
-    <Terminal repo_name={"repo_name"} repo_url={""} language_specific_install_command={language_specific_install_command}>
+    <Terminal repo_name="repo_name" repo_url="" language_specific_install_command="">
         cd {repo_name}
         {language_specific_install_command}
     </Terminal>
 </Step>
 
 <Step step="3" title="Push an empty commit">
-    <Terminal>
+    <Terminal repo_name="repo_name" repo_url="" language_specific_install_command="">
         git commit --allow-empty -m "Initial commit"
 
         git push
