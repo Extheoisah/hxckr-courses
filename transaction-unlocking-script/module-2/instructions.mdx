@@ -3,29 +3,38 @@ title: "Build a Bitcoin Transaction Unlocking Script"
 action: "Project Setup"
 ---
 
-# Module 2
+<ContentBox title="Project Setup" description="To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.">
 
-<p>
-    To begin, you need to clone the starter code needed for this challenge. Clone the repository to your local machine.
-</p>
+<Step step="1" title="Clone the Repository">
+    <Terminal>
+        git clone {repo_url}
+    </Terminal>
+</Step>
 
-## Step 1: Clone the Repository
+<Step step="2" title="Install Dependencies">
+    <Terminal>
+        cd {repo_name}
 
+        {language_specific_install_command}
+    </Terminal>
+</Step>
 
-<Terminal>
-    git clone {repo_url}
-</Terminal>
+<Step step="3" title="Push an empty commit">
+    <Terminal>
+        git commit --allow-empty -m "Initial commit"
 
-## Step 2: Install Dependencies
+        git push
+    </Terminal>
+</Step>
 
-<Terminal>
-    cd {repo_name}
-    {language_specific_install_command}
-</Terminal>
+<Text>
+    After pushing the empty commit, you should see a message indicating that the commit was pushed successfully.
+</Text>
 
-## Step 3: Push an empty commit
+</ContentBox>
 
-<Terminal>
-    git commit --allow-empty -m "Initial commit"
-    git push
-</Terminal>
+<GitPushContainer>
+    <GitPushText content="Listening for push events..." />
+
+    <GitPushButton title="Continue to next stage" />
+</GitPushContainer>
