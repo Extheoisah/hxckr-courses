@@ -14,7 +14,7 @@ action: "Project Setup"
 <Step step="2" title="Install Dependencies">
     <Terminal>
         cd $REPO_NAME
-        
+
         $LANGUAGE_SPECIFIC_INSTALL_COMMAND
     </Terminal>
 </Step>
@@ -32,3 +32,7 @@ action: "Project Setup"
 </Text>
 
 </ContentBox>
+
+<GitPushText content="Listening for push events..." />
+
+<GitPushButton title="Continue to next stage" />
