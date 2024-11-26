@@ -1,68 +1,53 @@
 ---
-title: "Fix the Broken Multi-Signature Wallet"
-action: "Fix the multisig wallet"
-module: 3
+title: "Build a Bitcoin Transaction Unlocking Script"
+action: "build the transaction unlocking script"
 ---
 
-<ChallengeBrief title="Fix the Broken Multi-Signature Wallet">
-Fix the simple multisig wallet implementation. Multi-signature (multisig) wallets are a critical security feature in Bitcoin, requiring multiple parties to authorize a transaction. In this challenge, you'll examine and improve a Bitcoin multisig wallet implementation.
+<ChallengeBrief title="Build a Bitcoin transaction unlocking script">
+Build a Bitcoin transaction unlocking script. In Bitcoin, transaction unlocking scripts are used to unlock the funds in a transaction. 
+They are typically embedded within the transaction's output script, which is executed by the recipient to verify the transaction's validity.
+In this challenge, you'll build a transaction unlocking script.
 </ChallengeBrief>
 
 <LearningObjectives title="Learning Objectives">
-  Implement secure Bitcoin multi-signature addresses
+  Understand the structure of a Bitcoin transaction
 
-  Master P2SH and P2WSH address types
-
-  Apply BIP standards for HD wallet derivation
+  Implement a transaction unlocking script
 
   Create secure transaction signing mechanisms
 </LearningObjectives>
 
-<ConceptCard title="Bitcoin Multi-Signature Fundamentals">
-  A multi-signature address requires M-of-N signatures to spend funds, where:
-
-  M = number of required signatures
-  
-  N = total number of possible signers
-  
-  Example: In a 2-of-3 setup, any 2 out of 3 designated parties must sign
+<ConceptCard title="Bitcoin Transaction Fundamentals">
+A transaction is a fundamental unit of data in Bitcoin, representing a transfer of value between two parties. 
+It contains information about the inputs (previous transactions that provide funds) and outputs (newly created outputs with specified amounts and destinations).
 </ConceptCard>
 
-<ConceptCard title="Address Types">
-  **P2SH (Pay to Script Hash)**
-  Legacy segwit multisig format starting with '2' on testnet
+<ConceptCard title="Transaction Inputs and Outputs">
+  **Inputs**: References previous transactions that provide funds.
 
-  Embeds script hash in address
-
-  **P2WSH (Pay to Witness Script Hash)**
-        Modern SegWit multisig format starting with 'tb1' on testnet and 'bc1' on mainnet
-
-        Separates script data into witness
+  **Outputs**: Specifies the new outputs with amounts and destinations.
 </ConceptCard>
 
-<ConceptCard title="Important BIP Standards">
-  **BIP32**: Hierarchical Deterministic Wallets
+<ConceptCard title="Locking and Unlocking Scripts">
+  **Locking Script**: Embedded in the transaction output, used to specify conditions for spending the output.
 
-  **BIP39**: Mnemonic seed phrases
-
-  **BIP48**: Multi-signature derivation paths
+  **Unlocking Script**: Attached to the transaction input, used to satisfy the conditions specified in the locking script.
 </ConceptCard>
+
+## Challenge Instructions
 
 <SetupSteps>
-1. Examine the code in `index.ts`
+  Examine the code in `index.ts`
 
-2. Run the tests:
-```bash
-./your_program.sh
-```
+  In the root directory of the project, run the tests: `./your_program.sh`
 
-3. Fix the implementation until all tests pass
+  Fix the implementation until all tests pass
 </SetupSteps>
 
 
 <ResourceSection>
 <ResourceCard 
-  title="Bitcoin Script"
+  title="Bitcoin Transaction Script"
   links={[
     { text: "Script Wiki", url: "https://en.bitcoin.it/wiki/Script" },
     { text: "Bitcoin Opcode Reference", url: "https://en.bitcoin.it/wiki/Script#Opcodes" }
@@ -70,18 +55,9 @@ Fix the simple multisig wallet implementation. Multi-signature (multisig) wallet
 />
 
 <ResourceCard 
-  title="BIP Standards"
-  links={[
-    { text: "BIP48 Specification", url: "https://github.com/bitcoin/bips/blob/master/bip-0048.mediawiki" },
-    { text: "BIP32 HD Wallets", url: "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" }
-  ]}
-/>
-
-<ResourceCard 
   title="Security Best Practices"
   links={[
-    { text: "Bitcoin Multisig Security", url: "https://bitcoin.org/en/secure-your-wallet#multi-sig" },
-    { text: "Hardware Wallet Integration", url: "https://bitcoin.org/en/choose-your-wallet" }
+    { text: "Bitcoin Transaction Script", url: "https://bitcoin.org/en/developer-reference#transaction-scripts" },
   ]}
 />
 </ResourceSection>
