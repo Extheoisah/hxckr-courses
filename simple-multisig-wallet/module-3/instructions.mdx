@@ -5,6 +5,10 @@ module: 3
 ---
 
 <ContentBox title="" description="">
+<TestResult title="Test Result" status="not started">
+  Click the button below to view the test results
+</TestResult>
+
 <ChallengeBrief title="Fix the Broken Multi-Signature Wallet">
 Fix the simple multisig wallet implementation. Multi-signature (multisig) wallets are a critical security feature in Bitcoin, requiring multiple parties to authorize a transaction. In this challenge, you'll examine and improve a Bitcoin multisig wallet implementation.
 </ChallengeBrief>
@@ -20,25 +24,27 @@ Fix the simple multisig wallet implementation. Multi-signature (multisig) wallet
 </LearningObjectives>
 
 <ConceptCard title="Bitcoin Multi-Signature Fundamentals">
-  - A multi-signature address requires M-of-N signatures to spend funds, where:
+  <ListItem title="A multi-signature address requires M-of-N signatures to spend funds, where:">
+    M = number of required signatures
 
-    - M = number of required signatures
+    N = total number of possible signers
+  </ListItem>
 
-    - N = total number of possible signers
-
-  - Example: In a 2-of-3 setup, any 2 out of 3 designated parties must sign
+  <ListItem title="Example: In a 2-of-3 setup, any 2 out of 3 designated parties must sign" />
 </ConceptCard>
 
 <ConceptCard title="Address Types">
-  - **P2SH (Pay to Script Hash)**
-    - Legacy segwit multisig format starting with '2' on testnet
+  <ListItem title="P2SH (Pay to Script Hash)">
+    Legacy segwit multisig format starting with '2' on testnet
 
-    - Embeds script hash in address
+    Embeds script hash in address
+  </ListItem>
 
-  - **P2WSH (Pay to Witness Script Hash)**
-    - Modern SegWit multisig format starting with 'tb1' on testnet and 'bc1' on mainnet
+  <ListItem title="P2WSH (Pay to Witness Script Hash)">
+    Modern SegWit multisig format starting with 'tb1' on testnet and 'bc1' on mainnet
 
-    - Separates script data into witness
+    Separates script data into witness
+  </ListItem>
 </ConceptCard>
 
 <ConceptCard title="Important BIP Standards">
