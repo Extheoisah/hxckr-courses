@@ -1,0 +1,120 @@
+---
+title: "Fix the Bitcoin Transaction Builder"
+action: "Fix the transaction builder"
+module: 3
+---
+
+<ContentBox title="" description="">
+<TestResult title="Test Result" status="not started" moduleNumber={3}>
+  Click the button below to view the test results
+</TestResult>
+
+<ChallengeBrief title="Fix the Bitcoin Transaction Builder">
+Fix the broken transaction builder implementation. A Bitcoin transaction builder must properly handle UTXO selection, fee calculation, and transaction signing. In this challenge, you'll examine and improve the implementation while learning about these critical concepts.
+</ChallengeBrief>
+
+<ConceptCard title="Bitcoin Transaction Fundamentals">
+  <ListItem title="Transaction Components">
+    Inputs (UTXOs being spent)
+
+    Outputs (New UTXOs being created)
+
+    Transaction fee
+  </ListItem>
+
+  <ListItem title="Key Concepts">
+    UTXO selection and management
+
+    Fee calculation and rate estimation
+
+    Transaction signing and verification
+
+    Script creation and execution
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Common Issues to Look For">
+  <ListItem title="UTXO Selection">
+    Proper input amount calculation
+
+    Handling change outputs
+
+    Dust amount prevention
+  </ListItem>
+
+  <ListItem title="Fee Calculation">
+    Dynamic fee rate estimation
+
+    Transaction size calculation
+
+    Change output adjustment
+  </ListItem>
+
+  <ListItem title="Transaction Signing">
+    Correct signature hash types
+
+    Input script creation
+
+    Witness data handling
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Important Bitcoin Concepts">
+  **Transaction Structure**: Understanding inputs, outputs, and locktime
+
+  **Script Types**: P2PKH, P2WPKH, P2SH, P2WSH
+
+  **Fee Estimation**: vBytes calculation and fee rates
+
+  **UTXO Management**: Coin selection algorithms
+</ConceptCard>
+
+<ConceptCard title="Key Fixes to Make">
+  <ListItem title="">
+    Correct UTXO referencing.
+
+    Proper output and fee calculation.
+
+    Implement signature generation.
+
+    Correct transaction serialization.
+  </ListItem>
+</ConceptCard>
+
+<SetupSteps>
+  Review the code in the `app` or `src` directory
+
+  In the root directory of the project, run the tests: `./your_program.sh`
+
+  Fix input, output, and signature issues.
+
+  Test and validate the transaction.
+
+  Fix the implementation until all tests pass
+</SetupSteps>
+
+<ResourceSection>
+<ResourceCard 
+  title="Bitcoin Transactions"
+  links={[
+    { text: "Transaction Wiki", url: "https://en.bitcoin.it/wiki/Transaction" },
+    { text: "Script Reference", url: "https://en.bitcoin.it/wiki/Script" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Learn Me a Bitcoin"
+  links={[
+    { text: "Unlocking and Locking Batches of bitcoins", url: "https://learnmeabitcoin.com/technical/transaction/" },
+    { text: "Transaction Builder", url: "https://learnmeabitcoin.com/10-transactions/" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Transaction Fees and Change"
+  links={[
+    { text: "Transaction Fees and Change", url: "https://developer.bitcoin.org/devguide/transactions.html#transaction-fees-and-change" }
+  ]}
+/>
+</ResourceSection>
+</ContentBox> 
