@@ -19,6 +19,13 @@ Create a single signature policy requiring one signature from the public key to 
 
     It allows for the creation of complex scripts using a high-level syntax, which are then compiled into the equivalent low-level Bitcoin scripts.
   </ListItem>
+  <ListItem title="Policy Creation">
+    Create a policy string for a single signature requirement
+
+    Convert the policy string to a concrete policy object
+
+    Compile the policy to Miniscript with Segwitv0 script context
+  </ListItem>
 </ConceptCard>
 
 <ConceptCard title="Common Issues to Look For">
@@ -57,7 +64,8 @@ Create a single signature policy requiring one signature from the public key to 
 <ResourceCard 
   title="Miniscript Documentation"
   links={[
-    { text: "Miniscript Documentation", url: "https://bitcoin.sipa.be/miniscript/" }
+    { text: "Miniscript Documentation", url: "https://bitcoin.sipa.be/miniscript/" },
+    { text: "Bitcoin Miniscript", url: "https://github.com/rust-bitcoin/rust-miniscript" }
   ]}
 />
 </ResourceSection>
