@@ -1,0 +1,100 @@
+---
+title: "Miniscript Policy Puzzle"
+action: "Create a Multi-Key Timelock Policy"
+module: 6
+---
+
+<ContentBox title="" description="">
+<TestResult title="Test Result" status="not started" moduleNumber={6}>
+  Click the button below to view the test results
+</TestResult>
+
+<ChallengeBrief title="Create a Multi-Key Timelock Policy">
+Implement a Miniscript policy that requires the user's key AND either the service provider's key OR a timelock condition. This creates a 2-of-2 multisig with a timelock escape hatch. You'll need to implement and test three different spending paths: user-only (should fail), user+service (should succeed), and user+timelock (should succeed).
+</ChallengeBrief>
+
+<ConceptCard title="Policy Fundamentals">
+  <ListItem title="Policy Structure">
+    Combination of AND/OR operations with timelock
+
+    Multiple valid spending paths
+
+    Mandatory user key requirement
+
+    Optional service key or timelock requirement
+  </ListItem>
+
+  <ListItem title="Implementation Tasks">
+    Create policy string with proper operator precedence
+
+    Handle timelock condition correctly
+
+    Implement signature generation for all paths
+
+    Test invalid spending attempts
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Test Cases Overview">
+  <ListItem title="User Key Only Path">
+    Test name: `user_without_service_or_timelock`
+    
+    Verifies that user's key alone cannot spend
+    
+    Tests proper policy enforcement
+    
+    Expects error on satisfaction attempt
+  </ListItem>
+
+  <ListItem title="User and Service Keys Path">
+    Test name: `user_and_service`
+    
+    Verifies successful spending with both keys
+    
+    Tests proper signature generation
+    
+    Validates witness satisfaction
+  </ListItem>
+
+  <ListItem title="User Key and Timelock Path">
+    Test name: `user_and_timelock`
+    
+    Tests spending after timelock expiration
+    
+    Requires block mining for timelock
+    
+    Validates transaction confirmation
+  </ListItem>
+</ConceptCard>
+
+<SetupSteps>
+  Review the test cases and spending conditions
+
+  Implement the policy string
+
+  Add signature generation for all paths
+
+  Run the tests: `cargo test --test stage5`
+
+  Verify all spending paths behave correctly
+
+  Push your changes once all tests pass
+</SetupSteps>
+
+<ResourceSection>
+<ResourceCard 
+  title="Miniscript Policies"
+  links={[
+    { text: "Policy Composition", url: "https://bitcoin.sipa.be/miniscript/policy" },
+  ]}
+/>
+
+<ResourceCard 
+  title="Bitcoin Timelocks"
+  links={[
+    { text: "CSV/CLTV Explanation", url: "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki" },
+    { text: "Timelock and Script", url: "https://en.bitcoin.it/wiki/Timelock" }
+  ]}
+/>
+</ResourceSection>
+</ContentBox> 
