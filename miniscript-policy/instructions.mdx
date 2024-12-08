@@ -1,0 +1,63 @@
+---
+title: "Miniscript Policy Puzzle"
+description: "Learn how to use Miniscript to construct and validate a Bitcoin transaction's spending condition."
+date: 2024-11-29T05:00:00Z
+lastmod: "2024-11-29"
+author: 
+  name: "Enigbe Ochekliye"
+  avatar: "https://avatars.githubusercontent.com/u/22314502?v=4"
+draft: false
+category: "Bitcoin Development"
+courseType: "Functional Test"
+tags: 
+  - "bitcoin"
+  - "cryptocurrency"
+  - "multisig"
+  - "miniscript"
+	- "timelocks"
+	- "scripting"
+languages: ["rust"]
+difficulty: "Medium"
+timeEstimate: 90
+prerequisites: 
+  - "Bitcoin fundamentals"
+  - "Understanding of miniscript"
+	- "Understanding of Bitcoin Script"
+	- "Understanding of Bitcoin Timelocks"
+starterCode: {
+  rust: "https://github.com/hxckr-org/workshop-miniscript-policy-puzzle--rs"
+}
+thumbnail: "https://github.com/hxckr-org/hxckr-web/blob/main/public/assets/images/bitcoin-txn-builder/thumbnail.webp?raw=true"
+module: 0
+---
+
+<ContentBox title="" description="">
+  <ChallengeBrief title="Miniscript Policy Puzzle">
+    Given a description of a Bitcoin transaction's spending conditions, participants are required to construct a corresponding Miniscript representation. Miniscript is a language for writing (a subset of) Bitcoin Scripts in a structured way, enhanced with batteries that facilitate script composition, ease, verify correctness. The goal of this challenge is to express the provided spending paths in Miniscript, which, when compiled, results in a Bitcoin script that accurately represents these conditions. This script must satisfy the provided spending conditions
+  </ChallengeBrief>
+
+  <LearningObjectives title="Learning Objectives">
+    Understand how to translate Bitcoin spending conditions into Miniscript syntax
+
+    Master the composition of complex spending conditions using Miniscript's structured format
+
+    Learn to validate and verify the correctness of Miniscript expressions
+
+    Gain proficiency in compiling Miniscript into valid Bitcoin Script
+
+    Develop skills in optimizing spending conditions for efficiency and cost
+
+  </LearningObjectives>
+
+  <Stages>
+    <Stage title="Challenge Setup" difficulty="Very Easy" isExpandable={true} initialLines={0}>
+      Choose your preferred language and proficiency level.
+    </Stage>
+    <Stage title="Project Setup" difficulty="Easy" isExpandable={true} initialLines={0}>
+      Clone the repository and install the dependencies.
+    </Stage>
+    <Stage title="Fix the Transaction Builder" difficulty="Medium" isExpandable={true} initialLines={0}>
+      Fix the transaction builder implementation.
+    </Stage>
+  </Stages>
+</ContentBox>
