@@ -1,0 +1,122 @@
+---
+title: "Miniscript Policy Puzzle"
+action: "Create a Weighted One of Two Signatures Policy"
+module: 5
+---
+
+<ContentBox title="" description="">
+<TestResult title="Test Result" status="not started" moduleNumber={5}>
+  Click the button below to view the test results
+</TestResult>
+
+<ChallengeBrief title="Create a Weighted One of Two Signatures Policy">
+Implement a Miniscript policy that creates a weighted spending condition with two keys, where one key is more likely to be used than the other. You'll need to create a policy string that reflects this probability difference and implement signature generation for both spending paths, with special attention to witness structure validation.
+</ChallengeBrief>
+
+<ConceptCard title="Weighted Policy Fundamentals">
+  <ListItem title="Policy Structure">
+    Miniscript policies can express probability weights for different spending paths
+
+    The policy should make one key more likely to be chosen for spending
+
+    Witness structure differs based on which key is used for signing
+  </ListItem>
+
+  <ListItem title="Implementation Tasks">
+    Create a weighted policy string favoring one key over another
+
+    Convert the policy string to a concrete policy object
+
+    Compile the policy to Miniscript with Segwitv0 script context
+
+    Generate valid signatures with correct witness structures
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Test Cases Overview">
+  <ListItem title="Unlikely Key Spending Path">
+    Test name: `one_of_two_one_unlikely`
+    
+    Verifies that the less likely key can still spend
+    
+    Validates specific witness structure (4 elements)
+    
+    Checks exact signature and public key placement
+  </ListItem>
+
+  <ListItem title="More Likely Key Spending Path">
+    Test name: `one_of_two_one_more_likely`
+    
+    Verifies that the more likely key can spend
+    
+    Validates simpler witness structure (2 elements)
+    
+    Optional task for spending preference verification
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Common Issues to Look For">
+  <ListItem title="Policy Creation">
+    Correct probability weighting in policy syntax
+
+    Proper compilation to Segwitv0 script context
+
+    Accurate descriptor creation using Wsh wrapper
+  </ListItem>
+
+  <ListItem title="Witness Structure">
+    Different witness lengths for different spending paths
+
+    Correct ordering of witness elements
+
+    Empty string handling in witness stack
+  </ListItem>
+
+  <ListItem title="Signature Generation">
+    Correct signature hash types
+
+    Proper public key to signature mapping
+  </ListItem>
+</ConceptCard>
+
+<SetupSteps>
+  Review the test cases focusing on witness requirements
+
+  Implement the weighted policy string
+
+  Add signature generation for both paths
+
+  Verify witness structure for each path
+
+  Run the tests: `cargo test --test stage4`
+
+  Validate witness stack contents
+
+  Push your changes once all tests pass
+</SetupSteps>
+
+<ResourceSection>
+<ResourceCard 
+  title="Miniscript Policy Weights"
+  links={[
+    { text: "Miniscript Policy Language", url: "https://bitcoin.sipa.be/miniscript/policy" },
+    { text: "Policy Compilation", url: "https://bitcoin.sipa.be/miniscript/#policy_compilation" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Bitcoin Script Witness"
+  links={[
+    { text: "Segregated Witness", url: "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki" },
+    { text: "Witness Structure", url: "https://github.com/bitcoin/bips/blob/master/bip-0144.mediawiki" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Advanced Miniscript"
+  links={[
+    { text: "Rust Miniscript Advanced", url: "https://docs.rs/miniscript/latest/miniscript/policy/index.html" }
+  ]}
+/>
+</ResourceSection>
+</ContentBox> 

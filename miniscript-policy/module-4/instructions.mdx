@@ -1,0 +1,110 @@
+---
+title: "Miniscript Policy Puzzle"
+action: "Create a One of Two Signatures Policy"
+module: 4
+---
+
+<ContentBox title="" description="">
+<TestResult title="Test Result" status="not started" moduleNumber={4}>
+  Click the button below to view the test results
+</TestResult>
+
+<ChallengeBrief title="Create a One of Two Signatures Policy">
+Implement a Miniscript policy that allows spending with any one of two signatures. You'll need to create a policy string, and implement signature generation for both possible spending paths. The tests verify that either key can independently spend the funds.
+</ChallengeBrief>
+
+<ConceptCard title="Miniscript Policy Fundamentals">
+  <ListItem title="Miniscript Syntax">
+    Miniscript is a domain-specific language for creating Bitcoin scripts.
+
+    It allows for the creation of complex scripts using a high-level syntax, which are then compiled into the equivalent low-level Bitcoin scripts.
+
+    The policy language supports common Bitcoin script primitives like multi-signature conditions.
+  </ListItem>
+
+  <ListItem title="Implementation Tasks">
+    Create a policy string for one-of-two signature requirement
+
+    Convert the policy string to a concrete policy object
+
+    Compile the policy to Miniscript with appropriate script context
+
+    Generate valid signatures for both spending paths
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Test Cases Overview">
+  <ListItem title="First Key Spending Path">
+    Test name: `one_of_two_equally_likely_first`
+    
+    Verifies that the first key can independently spend
+    
+    Requires proper signature generation and satisfier implementation
+  </ListItem>
+
+  <ListItem title="Second Key Spending Path">
+    Test name: `one_of_two_equally_likely_second`
+    
+    Verifies that the second key can independently spend
+    
+    Tests the alternative spending path with different signature
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Common Issues to Look For">
+  <ListItem title="Policy Creation">
+    Correct policy string syntax for OR conditions
+
+    Proper compilation to Segwitv0 script context
+
+    Accurate descriptor creation using Wsh wrapper
+  </ListItem>
+
+  <ListItem title="Signature Generation">
+    Correct signature hash types
+
+    Proper public key to signature mapping in satisfier
+
+    Valid witness data construction
+  </ListItem>
+</ConceptCard>
+
+<SetupSteps>
+  Review the test cases in the provided code
+
+  Implement the policy string and concrete policy creation
+
+  Add signature generation for both spending paths
+
+  Run the tests: `cargo test --test stage3`
+
+  Verify both spending paths work independently
+
+  Push your changes once all tests pass
+</SetupSteps>
+
+<ResourceSection>
+<ResourceCard 
+  title="Miniscript Puzzle Overview"
+  links={[
+    { text: "Miniscript Puzzle Overview", url: "https://gist.github.com/Extheoisah/0e1127121b3ad7620ac75ee29c7cd97f" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Miniscript Documentation"
+  links={[
+    { text: "Miniscript Documentation", url: "https://bitcoin.sipa.be/miniscript/" },
+    { text: "Rust Miniscript", url: "https://docs.rs/miniscript/latest/miniscript/" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Bitcoin Script and Signatures"
+  links={[
+    { text: "Script Wiki", url: "https://en.bitcoin.it/wiki/Script" },
+    { text: "Signature Hash Types", url: "https://river.com/learn/terms/s/sighash-flag/" }
+  ]}
+/>
+</ResourceSection>
+</ContentBox>

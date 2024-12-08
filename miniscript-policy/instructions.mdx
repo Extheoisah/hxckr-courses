@@ -25,7 +25,7 @@ prerequisites:
   - "Understanding of Bitcoin Script"
   - "Understanding of Bitcoin Timelocks"
 starterCode: { rust: "https://github.com/hxckr-org/workshop-miniscript-policy-puzzle--rs" }
-thumbnail: "https://github.com/hxckr-org/hxckr-web/blob/main/public/assets/images/bitcoin-txn-builder/thumbnail.webp?raw=true"
+thumbnail: "https://github.com/hxckr-org/hxckr-web/blob/main/public/assets/images/miniscript-puzzle/thumbnail.webp?raw=true"
 module: 0
 ---
 
@@ -54,8 +54,14 @@ module: 0
     <Stage title="Project Setup" difficulty="Easy" isExpandable={true} initialLines={0}>
       Clone the repository and install the dependencies.
     </Stage>
-    <Stage title="Fix the Transaction Builder" difficulty="Medium" isExpandable={true} initialLines={0}>
-      Fix the transaction builder implementation.
+    <Stage title="Create a Single Signature Policy" difficulty="Medium" isExpandable={true} initialLines={0}>
+      Create a single signature policy requiring one signature from the public key to spend the transaction. This test policy checks to see that a single key can spend when encumbered by the spending condition requiring just the key.
+    </Stage>
+    <Stage title="Create a One of Two Signatures Policy" difficulty="Medium" isExpandable={true} initialLines={0}>
+      Create a one of two signatures policy requiring one signature from either of two public keys to spend the transaction. This test policy checks to see that either key can independently spend when encumbered by the spending condition requiring either key.
+    </Stage>
+    <Stage title="Create a Weighted One of Two Signatures Policy" difficulty="Medium" isExpandable={true} initialLines={0}>
+      Create a weighted one of two signatures policy requiring one signature from either of two public keys to spend the transaction. This test policy checks to see that either key can independently spend when encumbered by the spending condition requiring either key.
     </Stage>
   </Stages>
 </ContentBox>

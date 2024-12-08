@@ -1,0 +1,64 @@
+---
+title: "Miniscript Policy Puzzle"
+action: "Create a Single Signature Policy"
+module: 3
+---
+
+<ContentBox title="" description="">
+<TestResult title="Test Result" status="not started" moduleNumber={3}>
+  Click the button below to view the test results
+</TestResult>
+
+<ChallengeBrief title="Create a Single Signature Policy">
+Create a single signature policy requiring one signature from the public key to spend the transaction. This test policy checks to see that a single key can spend when encumbered by the spending condition requiring just the key.
+</ChallengeBrief>
+
+<ConceptCard title="Miniscript Policy Fundamentals">
+  <ListItem title="Miniscript Syntax">
+    Miniscript is a domain-specific language for creating Bitcoin scripts.
+
+    It allows for the creation of complex scripts using a high-level syntax, which are then compiled into the equivalent low-level Bitcoin scripts.
+  </ListItem>
+</ConceptCard>
+
+<ConceptCard title="Common Issues to Look For">
+  <ListItem title="Policy Creation">
+    Creation of an appropriate policy and compilation to miniscript.
+
+    Provision of witness requirements to satisfy the spending condition.
+  </ListItem>
+</ConceptCard>
+
+<SetupSteps>
+  Review the code in the `tests` directory
+
+  In the root directory of the project, run the tests for this module: `cargo test --test stage2`
+
+  Fix the implementation until all tests pass
+
+  Once all tests pass, push your changes to the remote repository and proceed to the next module
+</SetupSteps>
+
+<ResourceSection>
+<ResourceCard 
+  title="Miniscript Puzzle Overview"
+  links={[
+    { text: "Miniscript Puzzle Overview", url: "https://gist.github.com/Extheoisah/0e1127121b3ad7620ac75ee29c7cd97f" }
+  ]}
+/>
+
+<ResourceCard 
+  title="Spending Conditions"
+  links={[
+    { text: "Custom Spending Conditions", url: "https://bitcoin.design/guide/how-it-works/custom-spending-conditions/#:~:text=Spending%20conditions%20encode%20the%20rules,key%20that%20can%20sign%20transactions." }
+  ]}
+/>
+
+<ResourceCard 
+  title="Miniscript Documentation"
+  links={[
+    { text: "Miniscript Documentation", url: "https://bitcoin.sipa.be/miniscript/" }
+  ]}
+/>
+</ResourceSection>
+</ContentBox>
